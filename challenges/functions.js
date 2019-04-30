@@ -6,7 +6,7 @@
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
-function consume (arg1, arg2, cb) {
+function consume(arg1, arg2, cb) {
   return cb(arg1,arg2);
 }
 
@@ -16,10 +16,11 @@ function consume (arg1, arg2, cb) {
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
-function add (x,y) {
+function add(x,y) {
   return x + y;
 }
-function multiply (x,y) {
+
+let multiply = function(x,y) {
   return x * y;
 }
 function greeting (firstName, lastName) {
@@ -27,9 +28,9 @@ function greeting (firstName, lastName) {
 }
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-consume(2,2,add); // 4
-consume(10,16,multiply); // 160
-consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2,2,add)); // 4
+console.log(consume(10,16,multiply)); // 160
+console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
